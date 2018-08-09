@@ -16,15 +16,15 @@ endif
 let g:loaded_vertical_region = 1
 
 " Define plugin maps
-nnoremap <expr> <Plug>(VerticalRegionUpNormal)
-      \ vertical_region#Map(v:count1, 1, 'n')
-nnoremap <expr> <Plug>(VerticalRegionDownNormal)
-      \ vertical_region#Map(v:count1, 0, 'n')
-onoremap <expr> <Plug>(VerticalRegionUpOperator)
-      \ vertical_region#Map(v:count1, 1, 'o')
-onoremap <expr> <Plug>(VerticalRegionDownOperator)
-      \ vertical_region#Map(v:count1, 0, 'o')
-xnoremap <expr> <Plug>(VerticalRegionUpVisual)
-      \ vertical_region#Map(v:count1, 1, 'x')
-xnoremap <expr> <Plug>(VerticalRegionDownVisual)
-      \ vertical_region#Map(v:count1, 0, 'x')
+nnoremap <silent> <Plug>(VerticalRegionUpNormal)
+      \ :<C-U>call vertical_region#Map(v:count1, 1, 'n')<CR>
+nnoremap <silent> <Plug>(VerticalRegionDownNormal)
+      \ :<C-U>call vertical_region#Map(v:count1, 0, 'n')<CR>
+onoremap <silent> <Plug>(VerticalRegionUpOperator)
+      \ :<C-U>call vertical_region#Map(v:count1, 1, 'o')<CR>
+onoremap <silent> <Plug>(VerticalRegionDownOperator)
+      \ :<C-U>call vertical_region#Map(v:count1, 0, 'o')<CR>
+xnoremap <silent> <Plug>(VerticalRegionUpVisual)
+      \ :<C-U>call vertical_region#Map(v:count1, 1, 'x')<CR>
+xnoremap <silent> <Plug>(VerticalRegionDownVisual)
+      \ :<C-U>call vertical_region#Map(v:count1, 0, 'x')<CR>
