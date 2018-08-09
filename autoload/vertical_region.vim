@@ -1,5 +1,10 @@
-" Function for expression maps returning navigaton keys to press
+" Autoloaded function for vertical_region.vim maps
 function! vertical_region#Map(count, up, mode) abort
+
+  " Reselect any selection
+  if a:mode ==# 'x'
+    normal! gv
+  endif
 
   " Get line and column number
   let l:num = line('.')
@@ -27,11 +32,13 @@ function! vertical_region#Map(count, up, mode) abort
   " If not moving linewise for operator mode and not in first column, move to
   " same column after line jump; is there a way to do this in one jump?
   let l:keys = l:num . 'G'
-  if a:mode !=# 'o' && l:col > 1
+  if a:mode ==# 'o'
+    let l:keys = 'V' . l:keys
+  elseif l:col > 1
     let l:keys .= l:col - 1 . 'l'
   endif
 
-  " Return normal mode commands
-  return l:keys
+  " Run normal mode commands
+  execute 'normal! ' . l:keys
 
 endfunction
