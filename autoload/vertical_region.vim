@@ -31,7 +31,7 @@ function! vertical_region#Map(count, up, mode) abort
 
   " If not moving linewise for operator mode and not in first column, move to
   " same column after line jump; is there a way to do this in one jump?
-  let l:keys = l:num . 'G'
+  let l:keys = l:num . 'G0'
   if a:mode ==# 'o'
     let l:keys = 'V' . l:keys
   elseif l:col > 1
