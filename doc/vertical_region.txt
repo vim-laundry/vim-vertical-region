@@ -13,44 +13,27 @@ This plugin only loads if 'compatible' is not set.
 
 MAPPINGS				*vertical_region-mappings*
 
-Six mappings are provided:
+Two mapping targets are provided.  They can be mapped in normal,
+operator-pending, and visual mode, and accept a [count] prefix to move by more
+than one matching line.
 
-					*<Plug>(VerticalRegionUpNormal)*
-`<Plug>(VerticalRegionUpNormal)` moves up to the previous line with non-space
-characters before or in the current column, in normal mode.
+					*<Plug>(VerticalRegionUp)*
+`<Plug>(VerticalRegionUp)` moves up to the previous line with non-space
+characters before or in the current column.
 
-					*<Plug>(VerticalRegionDownNormal)*
-`<Plug>(VerticalRegionDownNormal)` moves down to the next line with non-space
-characters before or in the current column, in normal mode.
-
-					*<Plug>(VerticalRegionUpOperator)*
-`<Plug>(VerticalRegionUpOperator)` moves up to the previous line with
-non-space characters before or in the current column, in visual mode.
-
-					*<Plug>(VerticalRegionDownOperator)*
-`<Plug>(VerticalRegionDownOperator)` moves down to the next line with
-non-space characters before or in the current column, in operating-pending
-mode.
-
-					*<Plug>(VerticalRegionUpVisual)*
-`<Plug>(VerticalRegionUpVisual)` moves up to the previous line with non-space
-characters before or in the current column, in visual mode.
-
-					*<Plug>(VerticalRegionDownVisual)*
-`<Plug>(VerticalRegionDownVisual)` moves down to the next line with non-space
-characters before or in the current column, in visual mode.
-
-All of them accept a [count] prefix to move by more than one matching line.
+					*<Plug>(VerticalRegionDown)*
+`<Plug>(VerticalRegionDown)` moves down to the previous line with non-space
+characters before or in the current column.
 
 There are no default key mappings; you should define those yourself in your
-|vimrc|. Here are the author's choices, using \{ and \} in all three modes:
+|vimrc|.  Here are the author's choices, using \{ and \} in all three modes:
 >
-	nmap <Bslash>{ <Plug>(VerticalRegionUpNormal)
-	nmap <Bslash>} <Plug>(VerticalRegionDownNormal)
-	omap <Bslash>{ <Plug>(VerticalRegionUpOperator)
-	omap <Bslash>} <Plug>(VerticalRegionDownOperator)
-	xmap <Bslash>{ <Plug>(VerticalRegionUpVisual)
-	xmap <Bslash>} <Plug>(VerticalRegionDownVisual)
+	nmap <Bslash>{ <Plug>(VerticalRegionUp)
+	nmap <Bslash>} <Plug>(VerticalRegionDown)
+	omap <Bslash>{ <Plug>(VerticalRegionUp)
+	omap <Bslash>} <Plug>(VerticalRegionDown)
+	xmap <Bslash>{ <Plug>(VerticalRegionUp)
+	xmap <Bslash>} <Plug>(VerticalRegionDown)
 <
 AUTHOR					*vertical_region-author*
 
