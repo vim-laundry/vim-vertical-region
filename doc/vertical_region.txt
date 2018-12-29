@@ -13,7 +13,7 @@ This plugin only loads if 'compatible' is not set.
 
 MAPPINGS				*vertical_region-mappings*
 
-Two mapping targets are provided. They can be mapped in normal,
+Two mapping targets are provided.  They can be mapped in normal,
 operator-pending, and visual mode, and accept a [count] prefix to move by more
 than one matching line.
 
@@ -26,7 +26,7 @@ characters before or in the current column.
 characters before or in the current column.
 
 There are no default key mappings; you should define those yourself in your
-|vimrc|. Here are the author's choices, using \{ and \} in all three modes:
+|vimrc|.  Here are the author's choices, using \{ and \} in all three modes:
 >
 	nmap <Bslash>{ <Plug>(VerticalRegionUp)
 	nmap <Bslash>} <Plug>(VerticalRegionDown)
