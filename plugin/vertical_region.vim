@@ -7,13 +7,13 @@
 " Author: Tom Ryder <tom@sanctum.geek.nz>
 " License: Same as Vim itself
 "
-if exists('g:loaded_vertical_region') || &compatible
+if exists('loaded_vertical_region') || &compatible
   finish
 endif
 if v:version < 700
   finish
 endif
-let g:loaded_vertical_region = 1
+let loaded_vertical_region = 1
 
 " Define plugin maps
 nnoremap <silent> <Plug>(VerticalRegionUp)
