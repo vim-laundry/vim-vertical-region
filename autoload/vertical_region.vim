@@ -1,5 +1,5 @@
 " Autoloaded function for vertical_region.vim maps
-function! vertical_region#Map(count, up, mode) abort
+function! vertical_region#(count, up, mode) abort
 
   " Reselect any selection
   if a:mode ==# 'x'
