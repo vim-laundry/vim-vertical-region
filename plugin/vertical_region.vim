@@ -13,15 +13,9 @@ endif
 let loaded_vertical_region = 1
 
 " Define plugin maps
-nnoremap <silent> <Plug>(VerticalRegionUp)
+noremap <silent> <Plug>(VerticalRegionUp)
       \ :<C-U>call vertical_region#(v:count1, 1, 'n')<CR>
-nnoremap <silent> <Plug>(VerticalRegionDown)
+sunmap <Plug>(VerticalRegionUp)
+noremap <silent> <Plug>(VerticalRegionDown)
       \ :<C-U>call vertical_region#(v:count1, 0, 'n')<CR>
-onoremap <silent> <Plug>(VerticalRegionUp)
-      \ :<C-U>call vertical_region#(v:count1, 1, 'o')<CR>
-onoremap <silent> <Plug>(VerticalRegionDown)
-      \ :<C-U>call vertical_region#(v:count1, 0, 'o')<CR>
-xnoremap <silent> <Plug>(VerticalRegionUp)
-      \ :<C-U>call vertical_region#(v:count1, 1, 'x')<CR>
-xnoremap <silent> <Plug>(VerticalRegionDown)
-      \ :<C-U>call vertical_region#(v:count1, 0, 'x')<CR>
+sunmap <Plug>(VerticalRegionDown)
