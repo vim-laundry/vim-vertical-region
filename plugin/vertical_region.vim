@@ -7,10 +7,7 @@
 " Author: Tom Ryder <tom@sanctum.geek.nz>
 " License: Same as Vim itself
 "
-if exists('loaded_vertical_region') || &compatible
-  finish
-endif
-if v:version < 700
+if exists('loaded_vertical_region') || &compatible || v:version < 700
   finish
 endif
 let loaded_vertical_region = 1
