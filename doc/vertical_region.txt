@@ -1,4 +1,4 @@
-*vertical_region.txt*	For Vim version 7.0	Last change: 2018 Aug 10
+*vertical_region.txt*	For Vim version 7.0	Last change: 2019 May 29
 
 DESCRIPTION				*vertical_region*
 
